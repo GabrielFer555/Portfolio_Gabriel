@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+.svgJavascript{
+    width: 500px;
+}
+
+.presentationTextPortfolio{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex:1;
+    padding: 5rem;
+    color: #902bf5;
+}
+
+#englishParagraph{
+    text-align: start;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .svgJavascript{
+        width: 300px;
+    }
+    .presentationTextPortfolio{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

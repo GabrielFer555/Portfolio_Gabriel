@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+BE+VLG:wght@100..400&display=swap');
+
+
+
+
+
+
+
+.developerPortfolioText, .picturePartPortfolioDev{
+    flex:1;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+#devPicture{
+    width: 30rem;
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+}
+#devPicture:hover{
+    box-shadow: 5px 5px 10px #902bf5 ;
+    transform: scale(1.1);
+}
+
+#techList, #programmerIntroduction{
+    color: #902bf5;
+    
+}
+
+#programmerIntroduction{
+    font-size: 4rem;
+    font-family: "Playwrite BE VLG", cursive;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#techList{
+    font-size: 2rem;
+    font-family: "Oswald", sans-serif;
+    text-shadow: 0.5px 0.5px 1px #000;
+}
+
+@media only screen and (max-width: 600px) {
+    .home{
+      width: 100vw;
+      height: 100%;
+      margin: 0;
+      max-width: 100vw;
+      flex-direction: column;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      background-color: #fefefe;
+    }
+
+    #devPicture{
+        width: 15rem;
+        border-radius: 25px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .developerPortfolioText, .picturePartPortfolioDev{
+        padding: 2rem;
+    }
+    .developerPortfolioText{
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .picturePartPortfolioDev{
+        flex:1
+    }
+  }
