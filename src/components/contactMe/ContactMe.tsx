@@ -1,17 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import '../../App.css'
 import './ContactMe.css'
 import 'notyf/notyf.min.css';
-
-import { Button, createTheme, Grid, Input, SxProps, TextField, ThemeOptions } from '@mui/material'
-import SendIcon from '@mui/icons-material/Send';
-import linkedin from '../../assets/linkedin.svg'
-import whatsapp from '../../assets/whatsapp.svg'
-import github from '../../assets/iconmonstr-github-1.svg'
 import { Link } from 'react-router-dom';
-import { Notyf } from 'notyf';
 import { useTypewriter } from 'react-simple-typewriter';
-import { Textarea } from '@mui/joy';
 import { useForm, ValidationError } from '@formspree/react';
 
 
@@ -32,7 +24,6 @@ const ContactMe = () => {
 
     const [nome, setNome] = useState<string>('')
     const [email, setEmail] = useState<string>('')
-    const [telefone, setTelefone] = useState<string>('')
     const [message, setMessage] = useState('')
 
 
@@ -79,7 +70,7 @@ const ContactMe = () => {
                             />
                         </div>
                         <div className='input-container-item'>
-                            <textarea className='input-item' required rows={7} placeholder='Mensagem' id='message' name='message'></textarea>
+                            <textarea className='input-item' value={message}required rows={7} onChange={(txt)=> setMessage(txt.target.value)}placeholder='Mensagem' id='message' name='message'></textarea>
                             <ValidationError
                                 prefix="Message"
                                 field="message"

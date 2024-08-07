@@ -1,5 +1,4 @@
-import React from 'react'
-import {BrowserRouter as Router, RouterProvider, Routes, Route } from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import MainPage from '../components/mainPage/MainPage';
 import AboutMe from '../components/aboutMe/AboutMe';
 import Menu from '../components/Menu/Menu';

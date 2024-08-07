@@ -1,5 +1,4 @@
-import React from 'react'
-import { Typewriter, Cursor, useTypewriter } from 'react-simple-typewriter'
+import {useTypewriter } from 'react-simple-typewriter'
 import './MainPage.css'
 import picture from '../../assets/devPortfolio.jpeg'
 import '../../App.css'
