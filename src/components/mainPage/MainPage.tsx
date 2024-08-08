@@ -25,7 +25,7 @@ const MainPage = () => {
                 <div className='developerPortfolioText'>
                     <h1 id='programmerIntroduction'>Hello! I´m a {typeEffect}</h1>
                     <h3 id='techList'>{RetypeEffect}</h3>
-                    <button className="button">Meu GitHub</button>
+                    <button className="button" id='github-button'></button>
                 </div>
                 <div className='picturePartPortfolioDev'>
                     <Tooltip title="Acessar meu github" arrow color='#000000'> 

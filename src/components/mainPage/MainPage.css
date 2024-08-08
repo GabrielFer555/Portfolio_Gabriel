@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+BE+VLG:wght@100..400&display=swap');
 
-
+:root{
+  --background: #fefefe;
+  --linkColor:#646cff;
+  --color:#121212;
+  --greenSpecial: #7bed9f;
+  --purple: #902bf5;
+}
 
 
 
@@ -43,6 +49,26 @@
     font-family: "Oswald", sans-serif;
     text-shadow: 0.5px 0.5px 1px #000;
 }
+
+#github-button{
+    box-shadow: var(--color) 0.5rem 0.5rem;
+}
+
+#github-button::after{
+    content: 'Meu GitHub';
+}
+
+#github-button:hover{
+    background-color: var(--purple);
+    color: var(--background);
+    border: 1px solid var(--greenSpecial);
+    box-shadow: var(--greenSpecial) 0.5rem 0.5rem;
+    
+}
+#github-button:hover::after{
+    content: 'Acessar meu GitHub';
+}
+
 
 @media only screen and (max-width: 600px) {
     .home{
