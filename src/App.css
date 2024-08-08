@@ -7,8 +7,16 @@
   --purple: #902bf5;
 }
 
+  .title{
+    font-family: "Playwrite BE VLG", cursive;
+    color: #902bf5;
+    text-shadow: 2px 2px #7bed9f;
+    flex: 3;
+  }
+
   h3{
-    font-size: 4rem;
+    font-size: 3.5rem;
+    
   }
   h4{
     font-size: 3rem;
@@ -22,6 +30,9 @@
     font-family: "Oswald", sans-serif;
   }
 
+  label{
+    font-family: "Oswald", sans-serif;
+  }
   html{
     background-color: var(--background);
   }

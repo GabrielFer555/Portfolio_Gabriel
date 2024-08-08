@@ -46,14 +46,13 @@ const ContactMe = () => {
     return (
         <section className='home home-contact'>
             <div className='contactTitleBox cannot-overflow'>
-                <h3 >Aqui não criamos apenas aplicações.</h3>
+                <h3>Vamos criar algo significativo juntos?</h3>
                 <hr />
-                <h5>Aqui {typeEffect}</h5>
                 <form action="" onSubmit={handleSubmit} className='form-contact'>
                     <div className='input-container'>
                         <div className='input-container-item'>
                             <label htmlFor="name">Nome</label>
-                            <input className='input-item' required type='text' aria-label='nome' placeholder='' id="name" name="nome" value={nome} onChange={(e) => setNome(e.target.value)} autoComplete='off'/>
+                            <input className='input-item' required type='text' aria-label='nome' placeholder='Seu nome' id="name" name="nome" value={nome} onChange={(e) => setNome(e.target.value)} autoComplete='off'/>
                             <ValidationError
                                 prefix="Nome"
                                 field="nome"
