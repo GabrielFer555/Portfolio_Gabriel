@@ -3,7 +3,6 @@ import '../../App.css'
 import './ContactMe.css'
 import 'notyf/notyf.min.css';
 import { Link } from 'react-router-dom';
-import { useTypewriter } from 'react-simple-typewriter';
 import { useForm, ValidationError } from '@formspree/react';
 
 
@@ -27,12 +26,6 @@ const ContactMe = () => {
     const [message, setMessage] = useState('')
 
 
-    const [typeEffect] = useTypewriter({
-        words: ['criamos história', 'aproximamos pessoas pela tecnologia', 'fazemos acontecer.'],
-        typeSpeed: 40,
-        deleteSpeed: 20,
-
-    })
     const [state, handleSubmit] = useForm('xkgwrega')
 
     if (state.succeeded) {
