@@ -16,6 +16,15 @@
     font-family: "Oswald", sans-serif;
   }
 
+  html{
+    background-color: #fefefe;
+  }
+  input{
+    background-color: #fefefe;
+    color: #121212;
+  }
+  
+
   a{
     font-size: 2rem;
   }

@@ -12,7 +12,7 @@ const ContactMe = () => {
     const ThankForContacting = () =>{
        return(
         <section className='home'>
-            <div className='contactTitleBox presentationTextPortfolio'>
+            <div className='contactTitleBox presentationTextPortfolio '>
             <h3 className="thanks-title">Obrigado por entrar em contato
             </h3>
             <p>Logo mais estaremos entrando em contato.</p>
@@ -45,7 +45,7 @@ const ContactMe = () => {
 
     return (
         <section className='home home-contact'>
-            <div className='contactTitleBox'>
+            <div className='contactTitleBox cannot-overflow'>
                 <h3 >Aqui não criamos apenas aplicações.</h3>
                 <hr />
                 <h5>Aqui {typeEffect}</h5>
