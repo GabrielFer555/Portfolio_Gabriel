@@ -14,7 +14,7 @@ const ContactMe = () => {
             <div className='contactTitleBox presentationTextPortfolio '>
             <h3 className="thanks-title">Obrigado por entrar em contato
             </h3>
-            <p>Logo mais estaremos entrando em contato.</p>
+            <p>Logo mais estarei lhe dando retorno.</p>
             <Link to="/main"><button className='button'>Voltar</button></Link>
             </div>
         </section>
@@ -56,7 +56,7 @@ const ContactMe = () => {
                         <label htmlFor="email">Email</label>
                             <input required  className='input-item' type='email' aria-label='Email' placeholder='helloWorld@email.com' id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete='off'/>
                             <ValidationError
-                                prefix="Email"
+                                prefix="This field"
                                 field="email"
                                 errors={state.errors}
                             />
