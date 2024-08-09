@@ -10,6 +10,8 @@
   --color: #121212;
   --greenSpecial: #7bed9f;
   --purple: #902bf5;
+  --toggle-fg:#f6e58d;
+  --toggle-bg:#f1c40f;
 }
 
 [data-theme='dark'] {
@@ -19,11 +21,14 @@
   --color: #fefefe;
   --greenSpecial: #7bed9f;
   --purple: #902bf5;
+  --toggle-bg:#4834d4;
+  --toggle-fg:#130f40;
 }
 
 html {
   font-size: 62.5%;
   background-color: var(--background);
+  transition: all ease-in-out 0.5s;
 }
 
 body {
@@ -171,13 +176,6 @@ input {
   font-family: "Oswald", sans-serif;
 }
 
-.portfolioFooter {
-  width: 100%;
-  background-color: var(--background);
-  color: var(--color);
-  text-align: center;
-  font-family: "Oswald", sans-serif;
-}
 
 
 
@@ -223,6 +221,7 @@ input {
   align-items: center;
   text-align: center;
   padding: 2rem;
+  gap: 2rem;
 }
 
 #devPicture {
@@ -246,13 +245,13 @@ input {
   font-size: 4rem;
   font-family: "Playwrite BE VLG", cursive;
   font-weight: 500;
-  text-shadow: 1px 1px 1px #000;
+  text-shadow: 1px 1px 1px var(--greenSpecial);
 }
 
 #techList {
   font-size: 2rem;
   font-family: "Oswald", sans-serif;
-  text-shadow: 0.5px 0.5px 1px #000;
+  text-shadow: 0.5px 0.5px 1px var(--greenSpecial);
 }
 
 #github-button {
@@ -395,8 +394,48 @@ h5 {
 #englishParagraph {
   text-align: start;
 }
+.toggle-container{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+}
 
+.toggle{
+  visibility: hidden;
+}
 
+.toggle + label{
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color);
+  position: relative;
+  gap: 1rem;
+}
+
+.toggle + label::before{
+  content: "";
+  height: 2em;
+  width: 4.5em;
+  border-radius: 1em;
+  background-color: var(--toggle-bg)
+}
+.toggle + label::after{
+  content: "";
+  height: 2em;
+  width: 2em;
+  border-radius: 1.2em;
+  background-color: var(--toggle-fg);
+  position: absolute;
+  left: 0.2em;
+  transition: 250ms ease-in-out all;
+}
+.toggle:checked + label::after{
+ transform: translateX(100%);
+ 
+}
 
 @keyframes fadeIn {
   from {
@@ -467,6 +506,7 @@ h5 {
 
   .developerPortfolioText {
     flex: 1;
+    width: 100vw;
     justify-content: center;
     align-items: center;
     display: flex;

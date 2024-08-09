@@ -34,7 +34,6 @@ const Menu = () => {
           }} >
           <Outlet />
       </main>
-      <footer className='portfolioFooter'> Feito por Gabriel Fernandes</footer>
     </>
   )
 }
