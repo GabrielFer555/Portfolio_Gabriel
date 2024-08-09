@@ -1,5 +1,4 @@
 import '../../App.css'
-import './AboutMe.css'
 import svg from '../../assets/javascriptDev.svg'
 import englishSpeaker from '../../assets/englishSpeaker.svg'
 

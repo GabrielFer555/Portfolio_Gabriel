@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import '../../App.css'
-import './ContactMe.css'
 import 'notyf/notyf.min.css';
 import { Link } from 'react-router-dom';
 import { useForm, ValidationError } from '@formspree/react';

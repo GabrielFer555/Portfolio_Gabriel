@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import '../../App.css'
-
+import { ThemeContext } from '../../contexts/themeContext'
 const Menu = () => {
+  const{theme} = useContext(ThemeContext)
 
   const location = useLocation()
   const [displayLocation, setDisplayLocation] = useState(location.pathname);
@@ -23,7 +24,7 @@ const Menu = () => {
           <li> <Link to='/contact' className="itemList">Contato</Link> </li>
         </ul>
       </nav>
-      <main className={`${transitionStage}`}
+      <main data-theme={theme} className={`${transitionStage}`}
           onAnimationEnd={() => {
             if (transitionStage === "fadeOut") {
               setDisplayLocation(location.pathname);
@@ -33,7 +34,7 @@ const Menu = () => {
           }} >
           <Outlet />
       </main>
-      <footer></footer>
+      <footer className='portfolioFooter'> Feito por Gabriel Fernandes</footer>
     </>
   )
 }

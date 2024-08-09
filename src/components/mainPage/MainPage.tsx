@@ -1,10 +1,13 @@
 import {useTypewriter } from 'react-simple-typewriter'
-import './MainPage.css'
 import picture from '../../assets/devPortfolio.jpeg'
 import '../../App.css'
 import { Tooltip } from '@mui/material'
+import { useContext } from 'react'
+import { ThemeContext } from '../../contexts/themeContext'
+
 
 const MainPage = () => {
+    const {toggleTheme} = useContext(ThemeContext)
 
     const [typeEffect] = useTypewriter({
         words: ['Web Developer', 'Mobile Dev', 'Developer.'],
@@ -21,11 +24,12 @@ const MainPage = () => {
 
     return (
         <>
-            <section className='home cannot-overflow'>
+            <section className='home cannot-overflow absolute-view'>
                 <div className='developerPortfolioText'>
                     <h1 id='programmerIntroduction'>Hello! I´m a {typeEffect}</h1>
                     <h3 id='techList'>{RetypeEffect}</h3>
                     <button className="button" onClick={()=>location.href="https://github.com/GabrielFer555"} id='github-button'></button>
+                    <button onClick={()=> toggleTheme()}>changeTheme</button>
                 </div>
                 <div className='picturePartPortfolioDev'>
                     <Tooltip title="Acessar meu github" arrow color='#000000'> 

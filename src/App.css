@@ -1,62 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+BE+VLG:wght@100..400&display=swap');
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+:root {
   --background: #fefefe;
-  --linkColor:#646cff;
-  --color:#121212;
+  --linkColor: #646cff;
+  --inputBackground: #fefefe;
+  --color: #121212;
   --greenSpecial: #7bed9f;
   --purple: #902bf5;
 }
 
-  .title{
-    font-family: "Playwrite BE VLG", cursive;
-    color: #902bf5;
-    text-shadow: 2px 2px #7bed9f;
-    flex: 3;
-  }
-
-  h3{
-    font-size: 3.5rem;
-    
-  }
-  h4{
-    font-size: 3rem;
-  }
-  h5{
-    font-size: 3.5rem;
-  }
-  p{
-    font-size: 2rem;
-    line-height: 1.8;
-    font-family: "Oswald", sans-serif;
-  }
-
-  label{
-    font-family: "Oswald", sans-serif;
-  }
-  html{
-    background-color: var(--background);
-  }
-  input, textarea{
-    background-color: var(--background);
-    color: var(--color);
-  }
-  
-
-  a{
-    font-size: 2rem;
-  }
-  li{
-    list-style: none;
+[data-theme='dark'] {
+  --background: #121212;
+  --linkColor: #646cff;
+  --inputBackground: #b1b1b1;
+  --color: #fefefe;
+  --greenSpecial: #7bed9f;
+  --purple: #902bf5;
 }
-label{
+
+html {
+  font-size: 62.5%;
+  background-color: var(--background);
+}
+
+body {
+  background: var(--background);
+}
+
+a {
+  font-weight: 500;
+  color: var(--linkColor);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--linkHoverColor);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--background);
+  color: var(--color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  border: solid var(--color) 0.5px;
+}
+
+
+.title {
+  font-family: "Playwrite BE VLG", cursive;
+  color: var(--purple);
+  text-shadow: 2px 2px #7bed9f;
+  flex: 3;
+}
+
+h3 {
+  font-size: 3.5rem;
+
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 3.5rem;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 1.8;
+  font-family: "Oswald", sans-serif;
+}
+
+label {
+  font-family: "Oswald", sans-serif;
+  color: var(--color);
+}
+
+input,
+textarea {
+  background-color: var(--inputBackground);
+  color: var(--color);
+}
+
+input,
+textarea::placeholder {
+  color: var(--color);
+}
+
+a {
   font-size: 2rem;
 }
-input{
+
+li {
+  list-style: none;
+}
+
+label {
+  font-size: 2rem;
+}
+
+input {
   font-size: 2rem;
 }
 
 
-.navigationPortfolio{
+.navigationPortfolio {
   z-index: 1;
   position: fixed;
   top: 0;
@@ -66,77 +131,78 @@ input{
 
 
 .itemList {
-    display: inline-block;
-    position: relative;
-    color: #fefefe;
-    list-style: none;
-    font-size: 1.5rem;
-    margin-left: 3rem;
-    padding: 5px;
-    transition: color 0.3s;
+  display: inline-block;
+  position: relative;
+  color: var(--background);
+  list-style: none;
+  font-size: 1.5rem;
+  margin-left: 3rem;
+  padding: 5px;
+  transition: color 0.3s;
 }
 
 .itemList::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 40%;
-    width: 0;
-    height: 2px;
-    background-color: var(--greenSpecial); /* Line color */
-    transition: width 0.6s;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 40%;
+  width: 0;
+  height: 2px;
+  background-color: var(--greenSpecial);
+  /* Line color */
+  transition: width 0.6s;
 }
 
-.selected{
-    text-decoration: var(--greenSpecial) line-through;
+.selected {
+  text-decoration: var(--greenSpecial) line-through;
 }
 
 .itemList:hover {
-    color: #902bf5;
+  color: var(--purple);
 }
 
 .itemList:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
-.list{
-    display: flex;
-    flex-direction: row;
-    font-family: "Oswald", sans-serif;
+.list {
+  display: flex;
+  flex-direction: row;
+  font-family: "Oswald", sans-serif;
 }
 
-.portfolioFooter{
-    width: 100%;
-    background-color: var(--color);
-    color: var(--background);
-    text-align: center;
-    font-family: "Oswald", sans-serif;
+.portfolioFooter {
+  width: 100%;
+  background-color: var(--background);
+  color: var(--color);
+  text-align: center;
+  font-family: "Oswald", sans-serif;
 }
 
 
 
-.home{
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    background-color: #fefefe;
+.home {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: var(--background);
 }
 
-.button{
+.button {
   width: 25rem;
   height: 6rem;
   font-family: 'Oswald', sans-serif;
   font-size: 1.8rem;
   text-transform: uppercase;
-  transition: 0.5s ease-in-out ;
+  transition: 0.5s ease-in-out;
 }
 
 
-.button:hover{
+.button:hover {
   cursor: pointer;
   border: solid 1px 1px var(--purple);
 }
@@ -149,11 +215,195 @@ input{
   animation: 0.5s fadeOut forwards;
 }
 
+.developerPortfolioText,
+.picturePartPortfolioDev {
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+#devPicture {
+  width: 30rem;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+}
+
+#devPicture:hover {
+  box-shadow: 5px 5px 10px var(--purple);
+  transform: scale(1.1);
+}
+
+#techList,
+#programmerIntroduction {
+  color: var(--purple);
+
+}
+
+#programmerIntroduction {
+  font-size: 4rem;
+  font-family: "Playwrite BE VLG", cursive;
+  font-weight: 500;
+  text-shadow: 1px 1px 1px #000;
+}
+
+#techList {
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+  text-shadow: 0.5px 0.5px 1px #000;
+}
+
+#github-button {
+  box-shadow: var(--color) 0.5rem 0.5rem;
+}
+
+#github-button::after {
+  content: 'Meu GitHub';
+}
+
+#github-button:hover {
+  background-color: var(--purple);
+  color: var(--background);
+  border: 1px solid var(--greenSpecial);
+  box-shadow: var(--greenSpecial) 0.5rem 0.5rem;
+
+}
+
+#github-button:hover::after {
+  content: 'Acessar meu GitHub';
+}
+
+.home-contact {
+  flex-direction: column;
+}
+
+.otherContacts {
+  margin-top: 3rem;
+}
+
+.contactTitleBox {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.contactTitleBox h3,
+h5 {
+  font-family: "Playwrite BE VLG", cursive;
+  color: var(--purple);
+  text-shadow: 2px 2px var(--greenSpecial);
+  flex: 3;
+}
+
+.thanks-title {
+  font-family: 'Pacifico', cursive !important;
+}
+
+.contactMeSocialMedia {
+  height: 40%;
+  width: 100%;
+  background-color: var(--purple);
+}
+
+#emailText:after {
+  content: 'Entrar em contato';
+}
+
+#emailText:hover:after {
+  content: 'Let´s roll! 🚀';
+  color: aliceblue;
+}
+
+#emailText:disabled {
+  content: 'Wait';
+  color: black;
+}
+
+#emailText:hover {
+  background-color: var(--purple);
+  border: #7bed9f 0.5px solid;
+  /* box-shadow: 6px 4px 4px #7bed9f;*/
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.form-contact {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.form-contact-button-group {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.input-container-item {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.input-item {
+  width: 80%;
+  border: none;
+  border: 1px solid var(--color);
+  transition: 0.5s;
+  font-size: 2rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.input-item:focus {
+  border: 1px solid var(--purple);
+  outline: none;
+}
+
+.svgJavascript {
+  width: 500px;
+}
+
+.presentationTextPortfolio {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  padding: 5rem;
+  color: var(--purple);
+}
+
+#englishParagraph {
+  text-align: start;
+}
+
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translate(-20px, 0);
   }
+
   to {
     opacity: 1;
     transform: translate(0px, 0px);
@@ -165,29 +415,76 @@ input{
     opacity: 1;
     transform: translate(0px, 0px);
   }
+
   to {
     transform: translate(-20px, 0);
     opacity: 0;
   }
 }
+
 @media only screen and (max-width: 600px) {
-  .home{
-    width: 100vw;
-    height: 100vh;
+  .home {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
     max-width: 100vw;
     flex-direction: column;
     justify-content: center;
     display: flex;
     align-items: center;
-    background-color: #fefefe;
+    background-color: var(--background);
   }
 
-  .button{
+  .absolute-view{
+    height: 100vh;
+    max-height: 100vh;
+  }
+
+  body{
+    background: var();
+  }
+
+  .button {
     width: 25rem;
     height: 6rem;
     font-size: 1.8rem;
   }
-  .cannot-overflow{
+
+  .cannot-overflow {
     overflow: hidden;
+  }
+
+  #devPicture {
+    width: 15rem;
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .developerPortfolioText,
+  .picturePartPortfolioDev {
+    padding: 2rem;
+  }
+
+  .developerPortfolioText {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .picturePartPortfolioDev {
+    flex: 1
+  }
+
+  .svgJavascript {
+    width: 300px;
+  }
+
+  .presentationTextPortfolio {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
