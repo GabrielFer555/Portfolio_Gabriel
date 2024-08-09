@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import '../../App.css'
-import { LightMode } from '@mui/icons-material'
 const Toggle = ({isChecked, handleCheck}:{isChecked:boolean, handleCheck:()=>void}) => {
     const [textLabel, setTextLabel] = useState(isChecked === true?'Dark Mode': 'Light Mode' )
 
